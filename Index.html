@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Todo List</title>
+<link rel="stylesheet" type="text/css" href="assets/css/todos.css">
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/lib/jquery-2.1.4.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+
+</head>
+<body>
+<div class= "container ">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+		  <div class="navbar-header">
+			<a class="navbar-brand" href="#">To-Dos and More!</a>
+		  </div>
+		  <ul class="nav navbar-nav">
+			<li><a href="#">To Dos</a></li>
+			<li><a href="#">Covid Status</a></li>
+			<li><a href="#">Movies</a></li>
+		  </ul>
+		</div>
+	  </nav>
+ <div class = "row">
+	<div class = "col-md-6 " id="container-for-todolist">
+		<h1 class="list-headers ">Tasks to compete </h1>
+		<input id = "input-for-new-todo" type="text" placeholder="Add New Todo">
+		
+		<ul id="to-do-list" class = "list">
+			<li class = "items"><span class="delete-icon-span"><i class="fa fa-trash"></i></span>Go To Potions Class </li>
+			<li class = "items"><span class="delete-icon-span"><i class="fa fa-trash"></i></span> Buy New Robes</li>
+			<li class = "items"><span class="delete-icon-span"><i class="fa fa-trash"></i></span> Visit Hagrid</li>
+		</ul>
+	</div>
+	<div  class = "col-md-5 " id="container-for-completedlist">
+		<h1 class="list-headers ">Completed tasks<span id="toggle-form"></span></h1>
+		<ul id="complete-list" class = "list"> 
+		</ul>
+	</div>
+ </div>
+ <div class = "row">
+	<div class = "col-md-12 " id="header-for-curated-lists">
+		<div class="page-header">
+		 <h1 id = "header-for-lists">Live Covid-19 status</h1>
+	   </div>
+	   <div  id="container-for-movielist">
+		<h1 class="list-headers">Top 10 States confirmed cases</h1>	
+		<ul id="state-list" >
+		</ul>
+	</div>
+	   
+	</div>
+ </div>
+<div class = "row">
+		<div class = "col-md-12 " id="header-for-curated-lists">
+			<div class="page-header">
+			 <h1 id = "header-for-lists">Dont decide a Movie by trailer but by the rating!</h1>
+		   </div>
+		</div>
+		<div class = "col-md-6 " id="container-for-movielist">
+			<h1 class="list-headers">Search Movies</h1>	
+			<input id = "input-for-movie-tosearch" type="text" placeholder="Enter Movie Name">
+			<ul id="movie-list" >
+			</ul>
+		</div>
+		<div class = "col-md-5 " id="container-for-movieinfo">
+			<h1 class="list-headers">Movie Info</h1>	
+			<ul id="movie-info" >
+			</ul>
+		</div>
+</div>
+
+
+
+<script type="text/javascript" src="assets/js/todos.js"></script>
+</body>
+</html>
