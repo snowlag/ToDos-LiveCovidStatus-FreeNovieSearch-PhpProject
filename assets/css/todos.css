@@ -13,6 +13,13 @@ ul {
 	padding: 0;
 }
 
+#auth-forms {
+	width: 50%
+}
+
+.list-date {
+	float: "right"
+}
 
 .list-headers {
 	margin-top: 2%;
@@ -106,6 +113,12 @@ li:hover span {
 	opacity: 1.0;
 }
 
+.glyphicon {
+    font-size: 25px;
+	padding-top: 7px;
+	background-color: #2BC0E4;
+}
+
 #input-for-new-todo {
 	font-size: 18px;
 	color: #2980b9;
@@ -149,12 +162,14 @@ li:hover span {
 	color: gray;
 	text-decoration: line-through;
 }
-
+#check-icon{
+	background-color: #2BC0E4;
+}
 
 #header-for-lists{
 	text-align: center;
 }
 .container{
-	margin-top: 2%
+	margin-top: 2%;
 }
 

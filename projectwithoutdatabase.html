@@ -19,31 +19,32 @@
 			<a class="navbar-brand" href="#">To-Dos and More!</a>
 		  </div>
 		  <ul class="nav navbar-nav">
-			<li><a href="#">To Dos</a></li>
-			<li><a href="#">Covid Status</a></li>
-			<li><a href="#">Movies</a></li>
+			<li ><a href="#container-for-todolist">To Dos</a></li>
+			<li ><a href="#container-for-covid-status">Covid Status</a></li>
+			<li ><a href="#header-for-curated-lists">Movies</a></li>
+			<li ><a href="#header-for-curated-lists">Login</a></li>
 		  </ul>
 		</div>
 	  </nav>
  <div class = "row">
 	<div class = "col-md-6 " id="container-for-todolist">
-		<h1 class="list-headers ">Tasks to compete </h1>
+		<h1 class="list-headers ">Tasks to complete </h1>
 		<input id = "input-for-new-todo" type="text" placeholder="Add New Todo">
 		
 		<ul id="to-do-list" class = "list">
-			<li class = "items"><span class="delete-icon-span"><i class="fa fa-trash"></i></span>Go To Potions Class </li>
-			<li class = "items"><span class="delete-icon-span"><i class="fa fa-trash"></i></span> Buy New Robes</li>
-			<li class = "items"><span class="delete-icon-span"><i class="fa fa-trash"></i></span> Visit Hagrid</li>
+			<li class = "items"><span class="delete-icon-span"><i class="fa fa-trash"></i></span><span id= check-icon class="glyphicon glyphicon-check pull-right"></span> Go To Potions Class </li>
+			<li class = "items"><span class="delete-icon-span"><i class="fa fa-trash"></i></span><span id= check-icon class="glyphicon glyphicon-check pull-right"></span> Buy New Robes</li>
+			<li class = "items"><span class="delete-icon-span"><i class="fa fa-trash"></i></span><span id= check-icon class="glyphicon glyphicon-check pull-right"></span> Visit Hagrid</li>
 		</ul>
 	</div>
-	<div  class = "col-md-5 " id="container-for-completedlist">
+	<div  class = "col-md-6" id="container-for-completedlist">
 		<h1 class="list-headers ">Completed tasks<span id="toggle-form"></span></h1>
 		<ul id="complete-list" class = "list"> 
 		</ul>
 	</div>
  </div>
  <div class = "row">
-	<div class = "col-md-12 " id="header-for-curated-lists">
+	<div class = "col-md-12 " id="container-for-covid-status">
 		<div class="page-header">
 		 <h1 id = "header-for-lists">Live Covid-19 status</h1>
 	   </div>
@@ -67,7 +68,7 @@
 			<ul id="movie-list" >
 			</ul>
 		</div>
-		<div class = "col-md-5 " id="container-for-movieinfo">
+		<div class = "col-md-6 " id="container-for-movieinfo">
 			<h1 class="list-headers">Movie Info</h1>	
 			<ul id="movie-info" >
 			</ul>

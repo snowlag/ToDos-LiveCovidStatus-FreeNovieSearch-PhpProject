@@ -1,0 +1,7 @@
+CREATE TABLE `todolist`.`todos` ( `id` INT NOT NULL AUTO_INCREMENT , `userid` INT NOT NULL , `item` VARCHAR(40) NOT NULL , `created` DATE NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB; 
+
+CREATE TABLE `todolist`.`completedlist` ( `id` INT NOT NULL AUTO_INCREMENT , `userid` INT NOT NULL , `item` VARCHAR(40) NOT NULL , `created` DATE NOT NULL  , `completed`  DATE NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB; 
+
+
+CREATE TABLE `todolist` .`register` ( `id` INT NOT NULL AUTO_INCREMENT  `timestamp` DATE NOT NULL DEFAULT CURRENT_TIMESTAMP , `name` VARCHAR(20) NOT NULL ,`email` VARCHAR(40) NOT NULL ,`phone` INT NOT NULL ,`password` TEXT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB; 
+
