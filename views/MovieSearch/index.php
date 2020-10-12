@@ -20,7 +20,6 @@
 		header("Location: logout.php");
 	}
 ?>
-	<div class= "container ">
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -46,7 +45,6 @@
       </ul>
     </div>
     </nav>
-  </div>
 
 <div class= "container ">
 <div class = "row">
