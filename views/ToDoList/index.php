@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Covid Status</title>
+<title>
+<?php
+   require "../../config/db.php";
+   if($_SESSION['name']){
+     $name = $_SESSION['name'];
+     echo "$name 's ToDo List";
+   }else{
+     echo "To Do List";
+   }              
+   ?>
+</title>
 <link rel="stylesheet" type="text/css" href="../../assets/css/todos.css">
 
 <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
@@ -13,11 +23,11 @@
 </head>
 <body>
 	<?php 
-	require "../../common.php";
+	
 
 	if($_SESSION['id']) {
 	}else{
-		header("Location: logout.php");
+    header("Location: ../../config/logout.php");
 	}
 	
 	?>
@@ -43,7 +53,7 @@
             ?>
           </a>
        </li>
-        <li><a href="../../logout.php">Logout</a></li>
+        <li><a href=../../config/logout.php>Logout</a></li>
       </ul>
     </div>
     </nav>

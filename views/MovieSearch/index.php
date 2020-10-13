@@ -13,11 +13,11 @@
 </head>
 <body>
 <?php 
-	require "../../common.php";
+require "../../config/db.php";
 	if($_SESSION['id']) {
 
 	}else{
-		header("Location: logout.php");
+		header("Location: ../../config/logout.php");;
 	}
 ?>
   <nav class="navbar navbar-default">
@@ -41,7 +41,7 @@
             ?>
           </a>
        </li>
-        <li><a href="../../logout.php">Logout</a></li>
+        <li><a href="../../config/logout.php"">Logout</a></li>
       </ul>
     </div>
     </nav>

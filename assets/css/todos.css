@@ -13,9 +13,6 @@ ul {
 	padding: 0;
 }
 
-#auth-forms {
-	width: 50%
-}
 
 .list-date {
 	float: "right"
@@ -166,3 +163,7 @@ li:hover span {
 	background-color: #2BC0E4;
 }
 
+#auth-forms {
+	padding: 5%;
+	width: 50%;
+}

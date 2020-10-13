@@ -1,5 +1,5 @@
 <?php
-require "../../common.php";
+require "../../config/db.php";
 //Take the data from post form
 // Check connection
 

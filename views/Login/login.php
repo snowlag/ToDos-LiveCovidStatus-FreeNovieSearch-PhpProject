@@ -12,11 +12,11 @@
 </head>
 <body>
  <?php 
-  require "../../common.php";
+require "../../config/db.php";
   ?>
 	<div class="container">
 		<center>
-        <div class="box auth-forms" id="auth-forms">
+        <div class="box" id="auth-forms">
        
       <div class="panel panel-secondary">
       <div class="panel-heading"><h3><center><b>Login</b></center></h3></div>

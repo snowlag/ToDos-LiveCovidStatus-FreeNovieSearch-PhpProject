@@ -12,7 +12,7 @@
 </head>
 <body>
  <?php 
-  require "../../common.php";
+require "../../config/db.php";
   ?>
 	<div class="container">
 		<center>

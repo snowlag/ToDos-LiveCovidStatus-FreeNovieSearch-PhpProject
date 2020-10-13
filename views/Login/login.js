@@ -70,6 +70,15 @@ $(document).ready(function() {
                 $("#password").after("<span id='error' class='text-danger'> Enter your password </span>");
                 return 0;
             }
+            if($("#password").val().length < 8) {
+                $("#password").after("<span id='error' class='text-danger'>You must be missing something</span>");
+                return 0;
+            }
+    
+            if($("#email").val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
+                $("#email").after("<span id='error' class='text-danger'>Please enter a valid email address </span>");
+                return 0;
+            }
     
             return 1;
     
