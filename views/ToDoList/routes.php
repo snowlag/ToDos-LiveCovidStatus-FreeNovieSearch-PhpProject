@@ -1,9 +1,11 @@
 <?php
 require "../../config/db.php";
-//Take the data from post form
-// Check connection
-//Route to add new item in todo list
 
+
+//--------------------------------------------------Routes for todo lists-------------------------------------------------------
+
+
+//Route to add new item in todo list
 if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['type']) && $_POST['type'] == "Post in Todolist") {
 
     //take inputs
@@ -100,7 +102,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['type']) && $_POST['type
 
 //Route to remove item from completed list
 if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['type']) && $_POST['type'] == "Remove Completedlistitem") {
-    //check if we register user successfully\
+    //check if we register user successfully
       //take inputs
       $item 	 =  $_POST['item'];
       $userid    =  $_SESSION['id'];

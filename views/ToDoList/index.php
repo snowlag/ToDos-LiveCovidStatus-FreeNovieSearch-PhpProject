@@ -24,7 +24,7 @@
 <body>
 	<?php 
 	
-
+//check user authentication
 	if($_SESSION['id']) {
 	}else{
     header("Location: ../../config/logout.php");
