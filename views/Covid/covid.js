@@ -1,7 +1,7 @@
 
 //when document loads fetch the corona status
 	$(document).ready(function(){    
-  let states= []
+    let states= []
   let deaths = []
   let active= []
   let recovered = []
@@ -30,7 +30,38 @@
 				}});
     });
     
+
+const FetchAndRenderData = () => {
+  let states= []
+  let deaths = []
+  let active= []
+  let recovered = []
+		$.ajax({ url: "https://api.covidindiatracker.com/state_data.json",
+				context: document.body,
+				success: function(data){
+
+					//sort descending on basis of confirmed
+					data = data.sort((a, b) => {
+						return b.confirmed - a.confirmed;
+					});
+					//slice tom select ten items
+          data = data.slice(0 , 10)
     
+            
+					data.map( obj => {
+            console.log(obj)
+            states.push(obj.state);
+            deaths.push(obj.deaths);
+            recovered.push(obj.recovered);
+            active.push(obj.active);
+						$("#state-list").append(`<li class = "items state-list"><span class="add-icon-span"><i class='fa fa-info-circle'></i></span>${obj.state} - ${obj.confirmed}</li>`)
+          })
+          DisplayGraph(states , deaths , recovered , active);
+					
+				}});
+}
+	 
+
 const DisplayGraph = (states , deaths , recovered , active) => {
   Highcharts.chart('container', {
     chart: {
@@ -80,3 +111,14 @@ const DisplayGraph = (states , deaths , recovered , active) => {
   ]
   });
 }
+
+
+
+//Update covid-19 list in half hour
+setInterval(() => {
+	console.log("updating list");
+	//remove older list
+	$(".state-list").remove();
+	FetchAndRenderData();
+	}, 1000 * 60 * 30); //1000  = 1sec
+	 

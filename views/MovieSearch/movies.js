@@ -20,7 +20,7 @@ $("#input-for-movie-tosearch").keypress(function(event){
 	$.ajax({url: `http://www.omdbapi.com/?s=${movietosearch}&apikey=thewdb`, success: function(result){
 	console.log(result)
 	if(result.Search && result.Search.length> 0){
-		var moviestoshow = result.Search.slice(0, 3)
+		var moviestoshow = result.Search
 		moviestoshow.map(movie => {
 			$("#movie-list").append(`<li class = 'movie-items'><span class="add-icon-span"><i class='fa fa-info-circle'></i></span> ${movie.Title}</li>`)
 		})
